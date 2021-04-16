@@ -74,6 +74,10 @@ class APIIndex(mixins.ListModelMixin,
                mixins.CreateModelMixin,
                generics.GenericAPIView):
     serializer_class = LyricDetailSerializer
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ['text', 'song__name', 'song__album__name']
+    ordering_fields = ['text', 'song__name', 'song__album__name']
+
 
     def get_queryset(self):
         return Lyric.objects.all()

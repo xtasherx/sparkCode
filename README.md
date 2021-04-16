@@ -18,11 +18,14 @@
       - `npm install`
       - `npm start`
       - open `http://localhost:3000/` in browser
-      
+#### Docker Compose
+ You can also use docker compose to run the server
+`docker-compose up` from the `da-react-challenge` directory
+This is untested, but theoretically should work
 
 ### Documentation
    - With the server running, navigate to `http://localhost:8000/swiftlyrics/swagger/` to view API documenation
-   - ** please not that POST lyrics does not include `song.id` in the documentation, but you can use the ID of the song instead of the name. Same goes for Album.  
+   - ** please note that POST lyrics does not include `song.id` in the documentation, but you can use the ID of the song instead of the name. Same goes for Album.  
        - ID takes precedence if name and ID are included. If song id is included, album is ignored
    - You can also see the responses to GET requests in browser by going to the url:
       - For example, `http://localhost:8000/swiftlyrics/album/`
