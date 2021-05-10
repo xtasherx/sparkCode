@@ -11,7 +11,7 @@ You can find the DeepArmor React Challenge at https://github.com/sparkcognition/
 You'll also need to setup the React application(under lyrics_api/swift-lyrics-react) - Instructions are also in the readme, and the default React readme included in the project
 
 ### API Description
-The backend is a simple API for searching and storing lyrics.  The lyrics should have an album, song, and the text of the lyrics. The API supports paging, filtering/sorting coming soon.
+The backend is a simple API for searching and storing lyrics.  The lyrics should have an album, song, and the text of the lyrics. The API supports paging, filtering, sorting.
 
 The current frontend app is minimal - it is a basic React app, with a few dependencies, mainly bootstrap.
 
