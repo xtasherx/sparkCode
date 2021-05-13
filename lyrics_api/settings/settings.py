@@ -40,17 +40,27 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'swift_lyrics',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8000',
+    'http://localhost:3000',
+)
 
 ROOT_URLCONF = 'settings.urls'
 
@@ -134,4 +144,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ],
     'DEFAULT_PAGINATION_CLASS': 'swift_lyrics.common.swift_pagination.SwiftPagination',
+    'PAGE_SIZE':25
 }
