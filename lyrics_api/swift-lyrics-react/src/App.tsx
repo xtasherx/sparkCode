@@ -62,7 +62,7 @@ function App(this: any) {
     setResultsNum(resNum);
     
   }
-
+//toggle sort type
   const handleSort = (e) => {
     setSortNum(e.target.getAttribute("dataKey"));    
   }
